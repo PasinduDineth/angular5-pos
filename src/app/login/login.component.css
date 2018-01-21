@@ -1,0 +1,13 @@
+.Modal-Head{
+  justify-content:center !important;
+}
+.Btn-Primary-Color{
+  background-color: #F70706 !important;
+  border-color: #F70706 !important;
+}
+input:focus {
+  border-color:rgba(247, 7, 6, 0.3);
+  box-shadow: 0 0 5px rgba(247, 7, 6, 0.81);
+}
+
+
