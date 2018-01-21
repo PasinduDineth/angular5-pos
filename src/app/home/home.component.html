@@ -3,30 +3,23 @@
       <div class="py-3" style="background-color:rgba(0, 0, 0,0.7);">
           <h1 class="title-style text-center">Ministry Of Taste Point Of Sales System</h1>
       </div>
-        <div class="row py-4 mx-auto">
-          <div class="col">
-              <div class="card rounded-0 border-0 mx-auto" style="width: 20rem;">
-                  <div class="card-block rounded-0">
-                      <a [routerLink]="['billing']" class="btn Btn-Primary-Color btn-block rounded-0 font-weight-bold"><h4>Billing System</h4></a>
-                    </div>
-                </div>
-          </div>
-          <div class="col">
-              <div class="card rounded-0 border-0 mx-auto" style="width: 20rem;">                  <div class="card-block rounded-0">
-                     <a [routerLink]="['inventory']" class="btn Btn-Primary-Color btn-block rounded-0 font-weight-bold"><h4>Inventory System</h4></a>
-                  </div>
-                </div>
-          </div>
-          <div class="col">
-              <div class="card rounded-0 border-0 mx-auto" style="width: 20rem;">
-                                  <div class="card-block rounded-0">
-                     <a href="#" class="btn Btn-Primary-Color btn-block rounded-0 font-weight-bold"><h4>Sales Reports</h4></a>
-                  </div>
-                </div>
+      <section class="py-4">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-md-3">
+              <a [routerLink]="['billing']" class="btn Btn-Primary-Color btn-block  font-weight-bold"><h4>Billing System</h4></a>            </div>
+            <div class="col-md-3">
+              <a [routerLink]="['inventory']" class="btn Btn-Primary-Color btn-block  font-weight-bold"><h4>Inventory System</h4></a>
+            </div>
+            <div class="col-md-3">
+              <a href="#" class="btn Btn-Primary-Color btn-block font-weight-bold"><h4>Sales Reports</h4></a>
+            </div>
           </div>
         </div>
-        <div>
+      </section>
 
+
+        <div>
           <router-outlet></router-outlet>
         </div>
       </div>
