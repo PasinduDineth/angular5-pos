@@ -3,3 +3,10 @@ body {
   background: url('../src/assets/images/bg.jpg') no-repeat center center fixed;
 
 }
+.theme-green .bs-datepicker-head{
+  background-color:#F70706 !important;
+}
+.theme-green .bs-datepicker-body table td span.selected, .theme-green .bs-datepicker-body table td.selected span, .theme-green .bs-datepicker-body table td span[class*="select-"]:after, .theme-green .bs-datepicker-body table td[class*="select-"] span:after{
+  background-color:#F70706 !important;
+}
+

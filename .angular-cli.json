@@ -19,8 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
-      ],
+        "styles.css",
+        "C:/Users/Pasindu/Desktop/POS/POS/node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+        "C:/Users/Pasindu/Desktop/POS/POS/node_modules/font-awesome/css/font-awesome.css"      ],
       "scripts": [
         "C:/Users/Pasindu/Desktop/POS/POS/node_modules/semantic-ui-css/semantic.js",
         "C:/Users/Pasindu/Desktop/POS/POS/node_modules/jquery/dist/jquery.js"

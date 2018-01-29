@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-inventory',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InventoryComponent implements OnInit {
 
-  constructor() { }
+  minDate = new Date(2017, 5, 10);
+  maxDate = new Date(2018, 9, 15);
 
+  bsValue: Date = new Date();
+  bsRangeValue: any = [new Date(2017, 7, 4), new Date(2017, 7, 20)];
   ngOnInit() {
   }
-
 }

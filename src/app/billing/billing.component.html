@@ -9,13 +9,15 @@
                       </div>
                       <div class="row justify-content-md-center py-2">
                       <div class="col-md-2">
-                          <a href="#" class="btn btn-block Btn-Primary-Color">
+                          <a (click)="addItemModal.show()" href="javascript:void(0)" class="btn btn-block Btn-Primary-Color">
+                              <fa name="plus"></fa>
                               Add Item
                           </a>
                         </div>
-                        <div class="col-md-2">
-                            <a href="#" class="btn btn-block Btn-Primary-Color">
-                                Add a Customer
+                        <div class="col-md-3">
+                            <a (click)="addCustModal.show()" href="javascript:void(0)" class="btn btn-block Btn-Primary-Color">
+                                <fa name="user-plus"></fa>
+                              Add a Customer
                             </a>
                           </div>
                   </div>
@@ -67,9 +69,6 @@
                       <div class="row justify-content-md-center py-2">
                           <h4>Customer and Payment Info</h4>
                       </div>
-
-
-
                       <div class="content-body">
                           <section class="card">
                             <div id="invoice-template" class="card-body">
@@ -134,7 +133,7 @@
                               <div id="invoice-footer">
                                 <div class="row justify-content-md-center">
                                   <div class="col-md-5 col-sm-12 text-center">
-                                    <button type="button" class="btn Btn-Primary-Color btn-lg my-1">Print Invoice</button>
+                                    <button type="button" class="btn Btn-Primary-Color btn-lg my-1"><fa name="print"></fa> Print Invoice</button>
                                   </div>
                                 </div>
                               </div>
@@ -148,5 +147,149 @@
                 </div>
             </div>
           </div>
-      </section>
+        </section>
 
+        <!-- add an item model -->
+      <div bsModal #addItemModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Add An Item</h4>
+                <button type="button" class="close pull-right" (click)="addItemModal.hide()" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <form class="form-horizontal">
+
+                      <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">Username</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group ">
+                        <button type="button" class="btn Btn-Primary-Color btn-lg btn-block">Add To List</button>
+                      </div>
+                    </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- add a custommer model -->
+      <div bsModal #addCustModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Add A Customer</h4>
+                <button type="button" class="close pull-right" (click)="addCustModal.hide()" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <form class="form-horizontal">
+
+                      <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">Username</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                        <div class="cols-sm-10">
+                          <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group ">
+                        <button type="button" class="btn Btn-Primary-Color btn-lg btn-block">Add Customer</button>
+                      </div>
+                    </form>
+              </div>
+            </div>
+          </div>
+        </div>
